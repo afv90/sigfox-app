@@ -11,7 +11,7 @@ export class PostsComponent implements OnInit {
   posts: Object;
   
   constructor(http: HttpClient) {
-    http.get('sigfox/sigfox?deviceID=0F2223').subscribe(response => {
+    http.get('/sigfox/sigfox?deviceID=0F2223').subscribe(response => {
       this.posts = response;
     });
   }

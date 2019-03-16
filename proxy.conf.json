@@ -1,7 +1,8 @@
 {
-  "/api/*": {
-    "target": "http://sigfox-service.herokuapp.com/sigfox?deviceID=0F2223",
-    "secure": false,
-    "pathRewrite": {"^/api" : ""}
+  "/sigfox": {
+    "target": "https://sigfox-service.herokuapp.com",
+    "secure": true,
+    "pathRewrite": {"^/sigfox" : ""},
+	"changeOrigin": true
   }
 }
